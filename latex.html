@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaTeX Study Guide</title>
+    <link rel="stylesheet" href="html/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-bar">
+            <div class="brand-block">
+                <a href="html/index.html" class="brand">
+                    <span class="brand-name">Lưu Quang Huy</span>
+                    <span class="brand-subtitle">Study Guide</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="linux.html" class="tab-btn">Linux</a>
+                <a href="python.html" class="tab-btn">Python</a>
+                <a href="c.html" class="tab-btn">C Programming</a>
+                <a href="discrete.html" class="tab-btn">Discrete Math</a>
+                <a href="latex.html" class="tab-btn active">LaTeX</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 0 60px;">
+        <section class="card">
+            <h2>LaTeX Study Guide</h2>
+            <p>LaTeX is a powerful system for writing documents, especially scientific papers, reports, theses, and mathematical content. It is widely used in universities and research.</p>
+
+            <h3>1. What Is LaTeX?</h3>
+            <ul>
+                <li>LaTeX is a system for writing documents in a clean and professional style.</li>
+                <li>It is especially strong in math, scientific writing, and long reports.</li>
+                <li>It is different from Word because you write commands and LaTeX handles the formatting.</li>
+            </ul>
+            <p><strong>Example:</strong> A short document with a title and a paragraph.</p>
+            <pre><code>\documentclass{article}
+\begin{document}
+Hello world.
+\end{document}</code></pre>
+
+            <h3>2. Why Use LaTeX?</h3>
+            <ul>
+                <li>It makes papers look neat and consistent.</li>
+                <li>It is excellent for equations such as <code>$E = mc^2$</code>.</li>
+                <li>It helps with sectioning, references, and bibliography automatically.</li>
+                <li>It is widely used in universities and research.</li>
+            </ul>
+            <p><strong>Example:</strong> A thesis or report can be formatted automatically with headings, numbering, and references.</p>
+
+            <h3>3. Basic Structure of a LaTeX Document</h3>
+            <pre><code>\documentclass{article}
+\usepackage[utf8]{inputenc}
+
+\begin{document}
+Hello, this is my first LaTeX document.
+\end{document}</code></pre>
+            <p>This is the simplest LaTeX file. The <code>documentclass</code> tells LaTeX what kind of document it is.</p>
+
+            <h3>4. Main Commands</h3>
+            <ul>
+                <li><code>\section{...}</code> creates a section.</li>
+                <li><code>\subsection{...}</code> creates a subsection.</li>
+                <li><code>\textbf{...}</code> makes text bold.</li>
+                <li><code>\textit{...}</code> makes text italic.</li>
+                <li><code>\begin{itemize} ... \end{itemize}</code> creates a bullet list.</li>
+            </ul>
+            <p><strong>Example:</strong> Create a section and bold text in a document.</p>
+            <pre><code>\section{Introduction}
+This is \textbf{important} text.</code></pre>
+
+            <h3>5. Writing Math in LaTeX</h3>
+            <p>LaTeX is famous for mathematical expressions. It is one of the best tools for writing formulas clearly.</p>
+            <ul>
+                <li>Use <code>$...$</code> for inline math.</li>
+                <li>Use <code>$$...$$</code> or <code>\begin{equation}</code> for display math.</li>
+                <li>Example: <code>$x^2 + y^2 = z^2$</code></li>
+            </ul>
+            <pre><code>\[ E = mc^2 \]
+
+$\int_a^b x^2 \, dx$</code></pre>
+
+            <h3>6. Common Math Symbols</h3>
+            <ul>
+                <li><code>\alpha</code>, <code>\beta</code>, <code>\gamma</code></li>
+                <li><code>\sum</code>, <code>\int</code>, <code>\frac</code></li>
+                <li><code>\leq</code>, <code>\geq</code>, <code>\neq</code></li>
+                <li><code>\sqrt{}</code>, <code>\cdot</code></li>
+            </ul>
+            <p><strong>Example:</strong> Write a formula for a quadratic equation.</p>
+            <pre><code>$x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}$</code></pre>
+
+            <h3>7. Lists and Environments</h3>
+            <pre><code>\begin{itemize}
+  \item First item
+  \item Second item
+\end{itemize}
+
+\begin{enumerate}
+  \item First step
+  \item Second step
+\end{enumerate}</code></pre>
+            <p>These environments are useful for making notes, assignments, and reports.</p>
+
+            <h3>8. Tables and Figures</h3>
+            <ul>
+                <li>Tables are created with <code>tabular</code>.</li>
+                <li>Figures are inserted with <code>\includegraphics</code>.</li>
+                <li>These are useful for reports, theses, and research papers.</li>
+            </ul>
+            <p><strong>Example:</strong> A simple table can be written like this.</p>
+            <pre><code>\begin{tabular}{|c|c|}
+\hline
+A & B \\
+\hline
+1 & 2 \\
+\hline
+\end{tabular}</code></pre>
+
+            <h3>9. References and Citations</h3>
+            <ul>
+                <li>LaTeX can manage bibliography with <code>bibtex</code> or <code>biber</code>.</li>
+                <li>It is very useful for academic writing and citation styles.</li>
+                <li>It helps create references automatically and neatly.</li>
+            </ul>
+
+            <h3>10. Applications of LaTeX</h3>
+            <ul>
+                <li>Research papers</li>
+                <li>Theses and dissertations</li>
+                <li>Books and lecture notes</li>
+                <li>CVs and resumes</li>
+                <li>Slides and presentations</li>
+            </ul>
+            <p><strong>Example:</strong> Many students use LaTeX for homework reports and academic papers because the layout is professional.</p>
+
+            <h3>11. Important Notes</h3>
+            <ul>
+                <li>LaTeX is best for structured and professional documents.</li>
+                <li>It may feel harder at first, but it becomes very powerful with practice.</li>
+                <li>It is especially useful for people who write many equations or academic papers.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

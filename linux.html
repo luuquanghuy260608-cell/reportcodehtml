@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux Study Guide</title>
+    <link rel="stylesheet" href="html/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-bar">
+            <div class="brand-block">
+                <a href="html/index.html" class="brand">
+                    <span class="brand-name">Lưu Quang Huy</span>
+                    <span class="brand-subtitle">Study Guide</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="linux.html" class="tab-btn active">Linux</a>
+                <a href="python.html" class="tab-btn">Python</a>
+                <a href="c.html" class="tab-btn">C Programming</a>
+                <a href="discrete.html" class="tab-btn">Discrete Math</a>
+                <a href="latex.html" class="tab-btn">LaTeX</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 0 60px;">
+        <section class="card">
+            <h2>Linux / Ubuntu Study Guide</h2>
+            <p>Linux is an operating system widely used in servers, programming, and development environments. Ubuntu is one of the most popular Linux distributions.</p>
+
+            <h3>1. What It Is</h3>
+            <ul>
+                <li>Linux is a free and open-source operating system.</li>
+                <li>Ubuntu is a beginner-friendly Linux distribution.</li>
+                <li>Linux is commonly used in programming, servers, cloud systems, and embedded devices.</li>
+            </ul>
+            <p><strong>Example:</strong> Open a terminal and type:</p>
+            <pre><code>pwd
+ls
+cd Documents</code></pre>
+
+            <h3>2. Why Linux Is Useful</h3>
+            <ul>
+                <li>It is stable and powerful.</li>
+                <li>It is used by developers around the world.</li>
+                <li>It supports programming tools, terminals, and automation well.</li>
+                <li>It is often used in servers and remote computers.</li>
+            </ul>
+            <p><strong>Example:</strong> A developer can use Linux to run Python, install packages, and manage a server remotely.</p>
+
+            <h3>3. Key Commands</h3>
+            <ul>
+                <li><code>pwd</code> shows the current working directory.</li>
+                <li><code>ls</code> lists files and folders.</li>
+                <li><code>cd</code> changes the current directory.</li>
+                <li><code>mkdir</code> creates a new folder.</li>
+                <li><code>rm</code> removes files or folders.</li>
+                <li><code>cp</code> copies files.</li>
+                <li><code>mv</code> moves or renames files.</li>
+                <li><code>sudo</code> runs a command with administrator privileges.</li>
+            </ul>
+            <pre><code>pwd
+ls
+cd Documents
+mkdir test_folder
+cp file.txt test_folder/
+rm test_folder/file.txt</code></pre>
+
+            <h3>4. Example: Working with Files</h3>
+            <pre><code>mkdir myproject
+cd myproject
+nano hello.txt</code></pre>
+            <p>This shows how a beginner can create a folder, enter it, and create a text file.</p>
+
+            <h3>5. Git with Linux</h3>
+            <p>Git is a version control system used to track changes in code. It works very well in Linux because developers often use the terminal for coding and collaboration.</p>
+            <ul>
+                <li><code>git init</code> starts a new Git repository.</li>
+                <li><code>git status</code> shows the current state of files.</li>
+                <li><code>git add .</code> stages files for commit.</li>
+                <li><code>git commit -m "message"</code> saves a new version.</li>
+                <li><code>git push</code> uploads changes to a remote repository.</li>
+                <li><code>git pull</code> downloads the latest changes.</li>
+            </ul>
+            <pre><code>git init
+git status
+git add .
+git commit -m "first commit"
+git push</code></pre>
+
+            <h3>6. Why Git Matters</h3>
+            <ul>
+                <li>It helps you save versions of your project.</li>
+                <li>It makes teamwork easier.</li>
+                <li>It lets you go back to older versions if something breaks.</li>
+                <li>It is used everywhere in software development.</li>
+            </ul>
+            <p><strong>Example:</strong> If you break your code, you can return to an older Git version instead of losing your work.</p>
+
+            <h3>7. More Useful Linux Commands</h3>
+            <ul>
+                <li><code>cat</code> shows the contents of a file.</li>
+                <li><code>grep</code> searches for text inside files.</li>
+                <li><code>chmod</code> changes permissions of files.</li>
+                <li><code>whoami</code> shows the current user.</li>
+                <li><code>top</code> shows running processes.</li>
+            </ul>
+            <pre><code>whoami
+cat hello.txt
+grep "hello" file.txt
+chmod +x script.sh
+top</code></pre>
+
+            <h3>8. Important Notes</h3>
+            <ul>
+                <li>Be careful with <code>rm -r</code> because it deletes folders permanently.</li>
+                <li>Use <code>man</code> to read the manual of a command.</li>
+                <li><code>apt install</code> is commonly used to install software on Ubuntu.</li>
+                <li>Use <code>apt update</code> before installing packages.</li>
+                <li>Linux is powerful because you can automate tasks with the terminal.</li>
+            </ul>
+            <p><strong>Example:</strong> Install Git on Ubuntu with:</p>
+            <pre><code>sudo apt update
+sudo apt install git</code></pre>
+
+            <h3>9. Docker Compose</h3>
+            <p>Docker Compose is a tool that helps you run multiple containers with one configuration file. It is very useful when your project needs services such as a web app, database, and cache at the same time.</p>
+            <ul>
+                <li><code>docker compose up</code> starts all services defined in the Compose file.</li>
+                <li><code>docker compose down</code> stops and removes the containers.</li>
+                <li><code>docker compose build</code> builds or rebuilds the images.</li>
+                <li><code>docker compose ps</code> shows the running containers.</li>
+            </ul>
+            <pre><code>version: "3.8"
+services:
+  web:
+    image: nginx
+    ports:
+      - "8080:80"
+  db:
+    image: postgres</code></pre>
+            <p><strong>Example:</strong> Start the services with:</p>
+            <pre><code>docker compose up -d</code></pre>
+        </section>
+    </main>
+</body>
+</html>

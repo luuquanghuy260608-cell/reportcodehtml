@@ -1,0 +1,10 @@
+services:
+  website:
+    image: nginx:latest
+    container_name: mywebsite
+    volumes:
+     - ./html:/usr/share/nginx/html
+    ports:
+     - 80:80
+    restart: always
+      

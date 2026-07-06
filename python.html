@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Study Guide</title>
+    <link rel="stylesheet" href="html/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container nav-bar">
+            <div class="brand-block">
+                <a href="html/index.html" class="brand">
+                    <span class="brand-name">Lưu Quang Huy</span>
+                    <span class="brand-subtitle">Study Guide</span>
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="linux.html" class="tab-btn">Linux</a>
+                <a href="python.html" class="tab-btn active">Python</a>
+                <a href="c.html" class="tab-btn">C Programming</a>
+                <a href="discrete.html" class="tab-btn">Discrete Math</a>
+                <a href="latex.html" class="tab-btn">LaTeX</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container" style="padding: 40px 0 60px;">
+        <section class="card">
+            <h2>Python Study Guide</h2>
+            <p>Python is a high-level programming language. It is easy to read and is often used for web development, data science, automation, and machine learning.</p>
+
+            <h3>1. What It Is</h3>
+            <span class="content-tip">Beginner-friendly idea</span>
+            <ul>
+                <li>Python is beginner-friendly and easy to read.</li>
+                <li>It supports many programming styles, including procedural, object-oriented, and functional programming.</li>
+                <li>It is widely used in AI, data science, web development, and automation.</li>
+            </ul>
+            <p><strong>Example:</strong> A simple Python program:</p>
+            <pre><code>name = "Huy"
+print("Hello", name)</code></pre>
+
+            <h3>2. Key Concepts</h3>
+            <ul>
+                <li>Variables store data, such as numbers or text.</li>
+                <li>Data types include integers, floats, strings, and booleans.</li>
+                <li>Conditionals use <code>if</code>, <code>elif</code>, and <code>else</code>.</li>
+                <li>Loops help repeat actions with <code>for</code> and <code>while</code>.</li>
+                <li>Functions make code reusable.</li>
+                <li>Lists and dictionaries help organize data.</li>
+            </ul>
+            <p><strong>Example:</strong></p>
+            <pre><code>age = 20
+if age >= 18:
+    print("Adult")
+else:
+    print("Teen")</code></pre>
+
+            <h3>3. Key Code Example</h3>
+            <pre><code>def greet(name):
+    return f"Hello, {name}" 
+
+print(greet("Alice"))</code></pre>
+
+            <h3>4. Recursion</h3>
+            <span class="content-tip">Important concept</span>
+            <p>Recursion is a technique where a function calls itself to solve a smaller version of the same problem. It is useful for tasks such as factorial calculation, Fibonacci numbers, tree traversal, and searching.</p>
+            <ul>
+                <li>A recursive function needs a <strong>base case</strong> to stop calling itself.</li>
+                <li>Each recursive call should move closer to the base case.</li>
+                <li>If the base case is missing or the problem does not get smaller, the function can run forever.</li>
+            </ul>
+            <pre><code>def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n - 1)
+
+print(factorial(5))</code></pre>
+
+            <h3>5. Example: Fibonacci</h3>
+            <pre><code>def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+print(fibonacci(6))</code></pre>
+
+            <h3>6. References in Python</h3>
+            <p>In Python, variables do not store the actual object directly in the same way as C. They store references to objects. This means two variables can point to the same object.</p>
+            <ul>
+                <li>A reference is a way to access an object.</li>
+                <li>When you assign one variable to another, both can refer to the same object.</li>
+                <li>Changing the object through one variable can affect the other.</li>
+            </ul>
+            <pre><code>a = [1, 2, 3]
+b = a
+b.append(4)
+
+print(a)  # [1, 2, 3, 4]
+print(b)  # [1, 2, 3, 4]</code></pre>
+
+            <h3>7. Applications of References in Python</h3>
+            <ul>
+                <li>Used in lists, dictionaries, and objects.</li>
+                <li>Useful for passing large data structures to functions without copying them.</li>
+                <li>Helpful in building graphs, trees, and linked structures.</li>
+                <li>Important when you want multiple names to refer to the same data.</li>
+            </ul>
+            <p><strong>Example:</strong> Modifying one list can affect another variable that points to the same object.</p>
+            <pre><code>nums = [1, 2, 3]
+other = nums
+other.append(4)
+print(nums)</code></pre>
+
+            <h3>8. List, Set, and Tuple</h3>
+            <span class="content-tip">Core Python data types</span>
+            <p>Python has several common data structures that help store and organize values.</p>
+            <ul>
+                <li><strong>List</strong>: ordered, changeable, allows duplicates.</li>
+                <li><strong>Tuple</strong>: ordered, unchangeable, allows duplicates.</li>
+                <li><strong>Set</strong>: unordered, no duplicates.</li>
+            </ul>
+            <pre><code>numbers = [1, 2, 2, 3]      # list
+coords = (10, 20)          # tuple
+unique = {1, 2, 3, 3}      # set
+
+print(numbers)
+print(coords)
+print(unique)</code></pre>
+
+            <h3>9. Functions in Python</h3>
+            <span class="content-tip">Reusable logic</span>
+            <p>A function is a reusable block of code. It helps organize programs and avoid repetition.</p>
+            <ul>
+                <li>Functions can take parameters.</li>
+                <li>Functions can return a value.</li>
+                <li>They make code easier to read and maintain.</li>
+            </ul>
+            <pre><code>def add(a, b):
+    return a + b
+
+print(add(3, 5))</code></pre>
+            <p><strong>Example:</strong> A function can also print a message without returning anything.</p>
+            <pre><code>def greet(name):
+    print("Hello", name)
+
+greet("Alice")</code></pre>
+
+            <h3>10. Dictionary and Loops</h3>
+            <p>A dictionary stores data as key-value pairs. Loops help you repeat actions over collections.</p>
+            <ul>
+                <li><strong>Dictionary</strong>: uses keys and values.</li>
+                <li><strong>for loop</strong>: repeats over items in a list or range.</li>
+                <li><strong>while loop</strong>: repeats while a condition is true.</li>
+            </ul>
+            <pre><code>student = {"name": "Alice", "age": 20}
+for key in student:
+    print(key, student[key])</code></pre>
+            <p><strong>Example:</strong> Use a loop to print numbers from 1 to 5.</p>
+            <pre><code>for i in range(1, 6):
+    print(i)</code></pre>
+
+            <h3>11. Important Notes</h3>
+            <ul>
+                <li>Recursion is elegant but can use more memory than loops.</li>
+                <li>Common recursive problems include factorial, Fibonacci, binary search, and tree traversal.</li>
+                <li>Always check the base case first.</li>
+                <li>Use loops when performance matters more than simplicity.</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
